@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wechat Bill analysis</title>
+    <!--echart-->
+    <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .left-content{
+            position: fixed;
+            width: 600px;
+            height: 100%;
+            text-align: center;
+        }
+
+        #per-day-spend-main{
+            width: 1000px;
+            height: 400px;
+            position: absolute;
+            left: 30%;
+            margin-top:20px
+        }
+
+        #top-10-main{
+            width: 1000px;
+            height: 600px;
+            position: absolute;
+            top: 600px;
+            left:30%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-content">
+        <p>
+            注：显示在图表中的已经去除了小数<br/>
+            ${0}<br/>
+            ${1}<br/>
+            ${2}<br/>
+            ${3}<br/>
+            ${4}<br/>
+        </p>
+    </div>
+    <div id="per-day-spend-main"></div>
+    <div id="top-10-main" ></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var perDaySpendLineChart = echarts.init(document.getElementById('per-day-spend-main'))
+        var top10PieChart = echarts.init(document.getElementById('top-10-main'))
+        // 指定图表的配置项和数据
+        perDaySpendLineOption = ${5}
+        top10PieOption = ${6}
+        // 使用刚指定的配置项和数据显示图表。
+        perDaySpendLineChart.setOption(perDaySpendLineOption);
+        top10PieChart.setOption(top10PieOption);
+    </script>
+</body>
+</html>

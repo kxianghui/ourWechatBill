@@ -1,0 +1,36 @@
+{
+            title : {
+                text: '每日消费',
+                x:'center'
+            },
+            xAxis: {
+                type: 'category',
+                data: ${0}
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: ${1},
+                type: 'line',
+                smooth: true,
+                itemStyle : { normal: {label : {show: true}}}
+            }],
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            dataZoom: {
+                show: true,
+                realtime: true,
+                y: 360,
+                height: 30,
+                start: 0,
+                end: 34
+            }
+        };
